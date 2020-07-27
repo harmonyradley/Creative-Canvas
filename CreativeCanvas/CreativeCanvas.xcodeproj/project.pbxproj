@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE16E7ED24CF53DE005E3027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E7EC24CF53DE005E3027 /* AppDelegate.swift */; };
-		FE16E7EF24CF53DE005E3027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E7EE24CF53DE005E3027 /* SceneDelegate.swift */; };
-		FE16E7F124CF53DE005E3027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E7F024CF53DE005E3027 /* ViewController.swift */; };
-		FE16E7F424CF53DE005E3027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E7F224CF53DE005E3027 /* Main.storyboard */; };
-		FE16E7F624CF53DE005E3027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16E7F524CF53DE005E3027 /* Assets.xcassets */; };
-		FE16E7F924CF53DE005E3027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E7F724CF53DE005E3027 /* LaunchScreen.storyboard */; };
+		FE16E80D24CF5650005E3027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E80C24CF5650005E3027 /* AppDelegate.swift */; };
+		FE16E80F24CF5650005E3027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E80E24CF5650005E3027 /* SceneDelegate.swift */; };
+		FE16E81124CF5650005E3027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E81024CF5650005E3027 /* ViewController.swift */; };
+		FE16E81424CF5650005E3027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81224CF5650005E3027 /* Main.storyboard */; };
+		FE16E81624CF5651005E3027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81524CF5651005E3027 /* Assets.xcassets */; };
+		FE16E81924CF5651005E3027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE16E7E924CF53DE005E3027 /* CreativeCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativeCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE16E7EC24CF53DE005E3027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE16E7EE24CF53DE005E3027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE16E7F024CF53DE005E3027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE16E7F324CF53DE005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE16E7F524CF53DE005E3027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE16E7F824CF53DE005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FE16E7FA24CF53DE005E3027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE16E80924CF5650005E3027 /* CreativeCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativeCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE16E80C24CF5650005E3027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE16E80E24CF5650005E3027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE16E81024CF5650005E3027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE16E81324CF5650005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE16E81524CF5651005E3027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE16E81824CF5651005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE16E81A24CF5651005E3027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE16E7E624CF53DE005E3027 /* Frameworks */ = {
+		FE16E80624CF5650005E3027 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE16E7E024CF53DE005E3027 = {
+		FE16E80024CF5650005E3027 = {
 			isa = PBXGroup;
 			children = (
-				FE16E7EB24CF53DE005E3027 /* CreativeCanvas */,
-				FE16E7EA24CF53DE005E3027 /* Products */,
+				FE16E80B24CF5650005E3027 /* CreativeCanvas */,
+				FE16E80A24CF5650005E3027 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE16E7EA24CF53DE005E3027 /* Products */ = {
+		FE16E80A24CF5650005E3027 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE16E7E924CF53DE005E3027 /* CreativeCanvas.app */,
+				FE16E80924CF5650005E3027 /* CreativeCanvas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE16E7EB24CF53DE005E3027 /* CreativeCanvas */ = {
+		FE16E80B24CF5650005E3027 /* CreativeCanvas */ = {
 			isa = PBXGroup;
 			children = (
-				FE16E7EC24CF53DE005E3027 /* AppDelegate.swift */,
-				FE16E7EE24CF53DE005E3027 /* SceneDelegate.swift */,
-				FE16E7F024CF53DE005E3027 /* ViewController.swift */,
-				FE16E7F224CF53DE005E3027 /* Main.storyboard */,
-				FE16E7F524CF53DE005E3027 /* Assets.xcassets */,
-				FE16E7F724CF53DE005E3027 /* LaunchScreen.storyboard */,
-				FE16E7FA24CF53DE005E3027 /* Info.plist */,
+				FE16E80C24CF5650005E3027 /* AppDelegate.swift */,
+				FE16E80E24CF5650005E3027 /* SceneDelegate.swift */,
+				FE16E81024CF5650005E3027 /* ViewController.swift */,
+				FE16E81224CF5650005E3027 /* Main.storyboard */,
+				FE16E81524CF5651005E3027 /* Assets.xcassets */,
+				FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */,
+				FE16E81A24CF5651005E3027 /* Info.plist */,
 			);
 			path = CreativeCanvas;
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE16E7E824CF53DE005E3027 /* CreativeCanvas */ = {
+		FE16E80824CF5650005E3027 /* CreativeCanvas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE16E7FD24CF53DE005E3027 /* Build configuration list for PBXNativeTarget "CreativeCanvas" */;
+			buildConfigurationList = FE16E81D24CF5651005E3027 /* Build configuration list for PBXNativeTarget "CreativeCanvas" */;
 			buildPhases = (
-				FE16E7E524CF53DE005E3027 /* Sources */,
-				FE16E7E624CF53DE005E3027 /* Frameworks */,
-				FE16E7E724CF53DE005E3027 /* Resources */,
+				FE16E80524CF5650005E3027 /* Sources */,
+				FE16E80624CF5650005E3027 /* Frameworks */,
+				FE16E80724CF5650005E3027 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +84,25 @@
 			);
 			name = CreativeCanvas;
 			productName = CreativeCanvas;
-			productReference = FE16E7E924CF53DE005E3027 /* CreativeCanvas.app */;
+			productReference = FE16E80924CF5650005E3027 /* CreativeCanvas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE16E7E124CF53DE005E3027 /* Project object */ = {
+		FE16E80124CF5650005E3027 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Harmony Radley";
 				TargetAttributes = {
-					FE16E7E824CF53DE005E3027 = {
+					FE16E80824CF5650005E3027 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
-			buildConfigurationList = FE16E7E424CF53DE005E3027 /* Build configuration list for PBXProject "CreativeCanvas" */;
+			buildConfigurationList = FE16E80424CF5650005E3027 /* Build configuration list for PBXProject "CreativeCanvas" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = FE16E7E024CF53DE005E3027;
-			productRefGroup = FE16E7EA24CF53DE005E3027 /* Products */;
+			mainGroup = FE16E80024CF5650005E3027;
+			productRefGroup = FE16E80A24CF5650005E3027 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE16E7E824CF53DE005E3027 /* CreativeCanvas */,
+				FE16E80824CF5650005E3027 /* CreativeCanvas */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE16E7E724CF53DE005E3027 /* Resources */ = {
+		FE16E80724CF5650005E3027 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE16E7F924CF53DE005E3027 /* LaunchScreen.storyboard in Resources */,
-				FE16E7F624CF53DE005E3027 /* Assets.xcassets in Resources */,
-				FE16E7F424CF53DE005E3027 /* Main.storyboard in Resources */,
+				FE16E81924CF5651005E3027 /* LaunchScreen.storyboard in Resources */,
+				FE16E81624CF5651005E3027 /* Assets.xcassets in Resources */,
+				FE16E81424CF5650005E3027 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE16E7E524CF53DE005E3027 /* Sources */ = {
+		FE16E80524CF5650005E3027 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE16E7F124CF53DE005E3027 /* ViewController.swift in Sources */,
-				FE16E7ED24CF53DE005E3027 /* AppDelegate.swift in Sources */,
-				FE16E7EF24CF53DE005E3027 /* SceneDelegate.swift in Sources */,
+				FE16E81124CF5650005E3027 /* ViewController.swift in Sources */,
+				FE16E80D24CF5650005E3027 /* AppDelegate.swift in Sources */,
+				FE16E80F24CF5650005E3027 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE16E7F224CF53DE005E3027 /* Main.storyboard */ = {
+		FE16E81224CF5650005E3027 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE16E7F324CF53DE005E3027 /* Base */,
+				FE16E81324CF5650005E3027 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FE16E7F724CF53DE005E3027 /* LaunchScreen.storyboard */ = {
+		FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE16E7F824CF53DE005E3027 /* Base */,
+				FE16E81824CF5651005E3027 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FE16E7FB24CF53DE005E3027 /* Debug */ = {
+		FE16E81B24CF5651005E3027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		FE16E7FC24CF53DE005E3027 /* Release */ = {
+		FE16E81C24CF5651005E3027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +280,7 @@
 			};
 			name = Release;
 		};
-		FE16E7FE24CF53DE005E3027 /* Debug */ = {
+		FE16E81E24CF5651005E3027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,7 +298,7 @@
 			};
 			name = Debug;
 		};
-		FE16E7FF24CF53DE005E3027 /* Release */ = {
+		FE16E81F24CF5651005E3027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE16E7E424CF53DE005E3027 /* Build configuration list for PBXProject "CreativeCanvas" */ = {
+		FE16E80424CF5650005E3027 /* Build configuration list for PBXProject "CreativeCanvas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE16E7FB24CF53DE005E3027 /* Debug */,
-				FE16E7FC24CF53DE005E3027 /* Release */,
+				FE16E81B24CF5651005E3027 /* Debug */,
+				FE16E81C24CF5651005E3027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE16E7FD24CF53DE005E3027 /* Build configuration list for PBXNativeTarget "CreativeCanvas" */ = {
+		FE16E81D24CF5651005E3027 /* Build configuration list for PBXNativeTarget "CreativeCanvas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE16E7FE24CF53DE005E3027 /* Debug */,
-				FE16E7FF24CF53DE005E3027 /* Release */,
+				FE16E81E24CF5651005E3027 /* Debug */,
+				FE16E81F24CF5651005E3027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE16E7E124CF53DE005E3027 /* Project object */;
+	rootObject = FE16E80124CF5650005E3027 /* Project object */;
 }
