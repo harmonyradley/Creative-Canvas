@@ -15,70 +15,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-b4-Kbl">
-                                <rect key="frame" x="25" y="808" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="small"/>
-                                <connections>
-                                    <action selector="smallSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4T-oX-eN4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-Dw-pN9">
-                                <rect key="frame" x="69" y="808" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Med."/>
-                                <connections>
-                                    <action selector="mediumSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDZ-A1-hL1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drp-QF-lT4">
-                                <rect key="frame" x="112" y="808" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Large"/>
-                                <connections>
-                                    <action selector="largeSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbH-dW-e4S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-Cs-crW">
-                                <rect key="frame" x="258" y="808" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stickers!"/>
-                                <connections>
-                                    <action selector="StickersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ld-X1-yze"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-Eb-xWg">
-                                <rect key="frame" x="332" y="808" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Text"/>
-                                <connections>
-                                    <action selector="addTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nde-a6-2yN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-Oc-Gp6">
-                                <rect key="frame" x="63" y="846" width="41" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-bp-Zjn">
+                                <rect key="frame" x="25" y="803.5" width="336" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-b4-Kbl">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="small"/>
+                                        <connections>
+                                            <action selector="smallSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4T-oX-eN4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-Dw-pN9">
+                                        <rect key="frame" x="55" y="0.0" width="35" height="30"/>
+                                        <state key="normal" title="Med."/>
+                                        <connections>
+                                            <action selector="mediumSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDZ-A1-hL1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drp-QF-lT4">
+                                        <rect key="frame" x="109" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Large"/>
+                                        <connections>
+                                            <action selector="largeSizeOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbH-dW-e4S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-Lp-ceR">
+                                        <rect key="frame" x="167" y="0.0" width="41" height="30"/>
+                                        <state key="normal" title="Color "/>
+                                        <connections>
+                                            <action selector="changeColorOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whe-kr-5iT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-Cs-crW">
+                                        <rect key="frame" x="227" y="0.0" width="60" height="30"/>
+                                        <state key="normal" title="Stickers!"/>
+                                        <connections>
+                                            <action selector="StickersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ld-X1-yze"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-Eb-xWg">
+                                        <rect key="frame" x="306" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Text"/>
+                                        <connections>
+                                            <action selector="addTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nde-a6-2yN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-Oc-Gp6">
+                                <rect key="frame" x="60" y="841.5" width="54" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draw  Here!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBs-U9-9IO">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw  Here!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBs-U9-9IO">
                                 <rect key="frame" x="144" y="379" width="105" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="u2O-Wp-tI0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-Lp-ceR">
-                                <rect key="frame" x="208" y="808" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Color "/>
-                                <connections>
-                                    <action selector="changeColorOfDrawingLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whe-kr-5iT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cfH-bp-Zjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="1kX-0G-QHQ"/>
+                            <constraint firstItem="bg8-Oc-Gp6" firstAttribute="top" secondItem="cfH-bp-Zjn" secondAttribute="bottom" constant="8" id="Q1E-rc-2yq"/>
+                            <constraint firstItem="lBs-U9-9IO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="blq-HC-6Oc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lBs-U9-9IO" secondAttribute="trailing" constant="165" id="dzo-jx-WNa"/>
+                            <constraint firstItem="lBs-U9-9IO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="291" id="n49-LN-eXt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bg8-Oc-Gp6" secondAttribute="trailing" constant="300" id="sE8-9S-dO4"/>
+                            <constraint firstItem="bg8-Oc-Gp6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="sJ8-Md-rKv"/>
+                            <constraint firstItem="bg8-Oc-Gp6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uMA-LK-1o9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Umn-a5-Dq7">
