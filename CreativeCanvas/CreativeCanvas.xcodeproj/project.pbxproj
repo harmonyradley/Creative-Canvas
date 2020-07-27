@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE16E80D24CF5650005E3027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E80C24CF5650005E3027 /* AppDelegate.swift */; };
 		FE16E80F24CF5650005E3027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E80E24CF5650005E3027 /* SceneDelegate.swift */; };
-		FE16E81124CF5650005E3027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E81024CF5650005E3027 /* ViewController.swift */; };
+		FE16E81124CF5650005E3027 /* CreativeCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E81024CF5650005E3027 /* CreativeCanvasViewController.swift */; };
 		FE16E81424CF5650005E3027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81224CF5650005E3027 /* Main.storyboard */; };
 		FE16E81624CF5651005E3027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81524CF5651005E3027 /* Assets.xcassets */; };
 		FE16E81924CF5651005E3027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		FE16E80924CF5650005E3027 /* CreativeCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativeCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16E80C24CF5650005E3027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE16E80E24CF5650005E3027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE16E81024CF5650005E3027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE16E81024CF5650005E3027 /* CreativeCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeCanvasViewController.swift; sourceTree = "<group>"; };
 		FE16E81324CF5650005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE16E81524CF5651005E3027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE16E81824CF5651005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				FE16E80C24CF5650005E3027 /* AppDelegate.swift */,
 				FE16E80E24CF5650005E3027 /* SceneDelegate.swift */,
-				FE16E81024CF5650005E3027 /* ViewController.swift */,
+				FE16E81024CF5650005E3027 /* CreativeCanvasViewController.swift */,
 				FE16E81224CF5650005E3027 /* Main.storyboard */,
 				FE16E81524CF5651005E3027 /* Assets.xcassets */,
 				FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE16E81124CF5650005E3027 /* ViewController.swift in Sources */,
+				FE16E81124CF5650005E3027 /* CreativeCanvasViewController.swift in Sources */,
 				FE16E80D24CF5650005E3027 /* AppDelegate.swift in Sources */,
 				FE16E80F24CF5650005E3027 /* SceneDelegate.swift in Sources */,
 			);
