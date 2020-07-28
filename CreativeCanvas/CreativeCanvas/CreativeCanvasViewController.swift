@@ -60,7 +60,7 @@ class CreativeCanvasViewController: UIViewController {
         canvasView.delegate = self
         canvasView.drawing = drawing
         originalImage = imageView.image
-
+        myImage(from: canvasView)
         canvasView.alwaysBounceVertical = true
         canvasView.allowsFingerDrawing = true
 
@@ -72,6 +72,8 @@ class CreativeCanvasViewController: UIViewController {
             canvasView.becomeFirstResponder()
         }
     }
+
+
 
     // rotate our device, it will reset the canvas view
     override func viewDidLayoutSubviews() {
@@ -165,6 +167,17 @@ class CreativeCanvasViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 
+
+    // trying to figure out how to save the image with drawing together
+    func myImage(from canvas: PKCanvasView) -> UIImage {
+        let format = UIGraphicsImageRendererFormat.default()
+        format.opaque = false
+        let image = UIGraphicsImageRenderer(size: imageView.frame.size, format: format).image { context in
+            imageView.image?.draw(at: .zero)
+            canvas.drawing.image(from: imageView.frame, scale: UIScreen.main.scale).draw(at: .zero)
+        }
+        return image
+    }
     // MARK: - IBActions
 
     @IBAction func SaveButtonTapped(_ sender: Any) {
@@ -172,6 +185,9 @@ class CreativeCanvasViewController: UIViewController {
         saveButtonTappedAlert()
         guard let originalImage = originalImage else { return }
         let filteredImage = image(byFiltering: originalImage)
+
+        let imageWithDrawing = myImage(from: canvasView)
+
 
         UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
 
@@ -183,7 +199,7 @@ class CreativeCanvasViewController: UIViewController {
         if image != nil {
             PHPhotoLibrary.shared().performChanges({
                 PHAssetChangeRequest.creationRequestForAsset(from: image!)
-                PHAssetChangeRequest.creationRequestForAsset(from: filteredImage)
+                PHAssetChangeRequest.creationRequestForAsset(from: imageWithDrawing)
             }, completionHandler: {success, error in
                 // deal with success or error
             })
