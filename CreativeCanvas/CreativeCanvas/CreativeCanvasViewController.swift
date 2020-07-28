@@ -14,15 +14,16 @@ import CoreImage.CIFilterBuiltins
 
 class CreativeCanvasViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet var canvasView: PKCanvasView!
     @IBOutlet var imageView: UIImageView!
 
+    // MARK: - Drawing Properties
     let canvasWidth: CGFloat = 770
     let canvasOverscrollHight: CGFloat = 500
-    // Save drawing
-    var drawing = PKDrawing()
+    var drawing = PKDrawing() // Save drawing
 
-    // Image Properties
+    // MARK: - Image Propterties
     private let context = CIContext(options: nil)
 
     var originalImage: UIImage? {
@@ -83,6 +84,9 @@ class CreativeCanvasViewController: UIViewController {
 
         updateContentSizeForDrawing()
         canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
+        canvasView.backgroundColor = .clear
+        canvasView.isOpaque = false
+
     }
 
     // MARK: - Pencil Kit Methods
@@ -118,20 +122,20 @@ class CreativeCanvasViewController: UIViewController {
     // MARK: - Core Image Methods
 
     func image(byFiltering image: UIImage) -> UIImage {
-           guard let cgImage = image.cgImage else { return image}
+        guard let cgImage = image.cgImage else { return image}
 
-           let ciImage = CIImage(cgImage: cgImage)
+        let ciImage = CIImage(cgImage: cgImage)
 
-           let filter = CIFilter.photoEffectNoir()
+        let filter = CIFilter.photoEffectNoir()
 
-           filter.inputImage = ciImage
+        filter.inputImage = ciImage
 
-           guard let outputImage = filter.outputImage else { return image }
+        guard let outputImage = filter.outputImage else { return image }
 
-           guard let outputCGImage = context.createCGImage(outputImage, from: outputImage.extent) else { return image }
+        guard let outputCGImage = context.createCGImage(outputImage, from: outputImage.extent) else { return image }
 
-           return UIImage(cgImage: outputCGImage, scale: image.scale, orientation: image.imageOrientation)
-       }
+        return UIImage(cgImage: outputCGImage, scale: image.scale, orientation: image.imageOrientation)
+    }
 
     func updateImage() {
         if let originalImage = originalImage {
@@ -148,18 +152,18 @@ class CreativeCanvasViewController: UIViewController {
     }
     func presentImagePicker() {
 
-            // Make sure the photo library is available to use in the first place
-            guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-                NSLog("The photo library is not available")
-                return
-            }
-
-            let imagePicker = UIImagePickerController()
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.delegate = self
-
-            present(imagePicker, animated: true, completion: nil)
+        // Make sure the photo library is available to use in the first place
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            NSLog("The photo library is not available")
+            return
         }
+
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+
+        present(imagePicker, animated: true, completion: nil)
+    }
 
     // MARK: - IBActions
 
@@ -194,6 +198,18 @@ class CreativeCanvasViewController: UIViewController {
 // MARK: - Extenstions
 
 extension CreativeCanvasViewController: PKCanvasViewDelegate, PKToolPickerObserver {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+
+        let offsetX: CGFloat = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0)
+        let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
+        imageView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
+        imageView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+
+    }
 
 }
 

@@ -15,31 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djh-bs-57u" customClass="PKCanvasView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDX-tt-9V3">
-                                        <rect key="frame" x="20" y="152" width="374" height="323"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="323" id="saU-eh-9NG"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-4I-qJu">
+                                <rect key="frame" x="32" y="272" width="351" height="352"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-GI-YVg" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="KDX-tt-9V3" firstAttribute="top" secondItem="djh-bs-57u" secondAttribute="top" constant="152" id="7KM-hl-fcZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="KDX-tt-9V3" secondAttribute="trailing" constant="20" id="VDv-RS-VWp"/>
-                                    <constraint firstItem="KDX-tt-9V3" firstAttribute="leading" secondItem="djh-bs-57u" secondAttribute="leading" constant="20" id="cSb-nG-KQW"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="djh-bs-57u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4V9-ML-186"/>
-                            <constraint firstItem="djh-bs-57u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CJZ-pK-Mf0"/>
-                            <constraint firstItem="djh-bs-57u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gD8-NL-vtH"/>
-                            <constraint firstItem="djh-bs-57u" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="pwb-A0-FgN"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Umn-a5-Dq7">
@@ -69,8 +55,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="canvasView" destination="djh-bs-57u" id="bi2-py-B2I"/>
-                        <outlet property="imageView" destination="KDX-tt-9V3" id="lml-yW-W5o"/>
+                        <outlet property="canvasView" destination="Wa7-GI-YVg" id="b9l-4W-8PY"/>
+                        <outlet property="imageView" destination="DBu-4I-qJu" id="SiZ-mB-HlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
