@@ -28,22 +28,7 @@ class CreativeCanvasViewController: UIViewController {
 
     var originalImage: UIImage? {
         didSet {
-            // We want to scale down the image to make it easier to filter until the user is ready to save the image
-            guard let image = originalImage else { return }
-
-            // height and width of the image view
-            var scaledSize = imageView.bounds.size
-
-            // 1, 2, or 3
-            let scale = UIScreen.main.scale
-
-            scaledSize = CGSize(width: scaledSize.width * scale,
-                                height: scaledSize.height * scale)
-
-            // `imageByScaling` is coming from the UIImage+Scaling.swift
-            let scaledImage = image.imageByScaling(toSize: scaledSize)
-
-            self.scaledImage = scaledImage
+            updateImage()
         }
     }
 
@@ -60,7 +45,6 @@ class CreativeCanvasViewController: UIViewController {
         canvasView.delegate = self
         canvasView.drawing = drawing
         originalImage = imageView.image
-        myImage(from: canvasView)
         canvasView.alwaysBounceVertical = true
         canvasView.allowsFingerDrawing = true
 
@@ -167,22 +151,37 @@ class CreativeCanvasViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 
-
-    // trying to figure out how to save the image with drawing together
     func myImage(from canvas: PKCanvasView) -> UIImage {
         let format = UIGraphicsImageRendererFormat.default()
         format.opaque = false
-        let image = UIGraphicsImageRenderer(size: imageView.frame.size, format: format).image { context in
-            imageView.image?.draw(at: .zero)
-            canvas.drawing.image(from: imageView.frame, scale: UIScreen.main.scale).draw(at: .zero)
-        }
-        return image
-    }
+
+        var scaledSize = imageView.bounds.size
+        let scale = UIScreen.main.scale
+        scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
+
+        let image = UIGraphicsImageRenderer(size: scaledSize, format: format).image { context in
+               imageView.image?.draw(at: .zero)
+               canvas.drawing.image(from: imageView.frame, scale: scale).draw(at: .zero)
+           }
+           return image
+       }
+
+//    // trying to figure out how to save the image with drawing together
+//    func myImage(from canvas: PKCanvasView) -> UIImage {
+//        let format = UIGraphicsImageRendererFormat.default()
+//        format.opaque = false
+//        let image = UIGraphicsImageRenderer(size: imageView.frame.size, format: format).image { context in
+//            imageView.image?.draw(at: .zero)
+//            canvas.drawing.image(from: imageView.frame, scale: UIScreen.main.scale).draw(at: .zero)
+//        }
+//        return image
+//    }
     // MARK: - IBActions
 
     @IBAction func SaveButtonTapped(_ sender: Any) {
         // Save to camera roll
         saveButtonTappedAlert()
+
         guard let originalImage = originalImage else { return }
         let filteredImage = image(byFiltering: originalImage)
 
@@ -205,6 +204,8 @@ class CreativeCanvasViewController: UIViewController {
             })
         }
     }
+
+    // image scaling to canvasview
 
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
         presentImagePicker()
