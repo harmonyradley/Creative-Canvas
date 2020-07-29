@@ -1,7 +1,5 @@
 //
-//  ViewController.swift
-//  CreativeCanvas
-//
+//  CreativeCanvasViewController.swift
 //  Created by Harmony Radley on 7/27/20.
 //  Copyright © 2020 Harmony Radley. All rights reserved.
 //
@@ -57,8 +55,6 @@ class CreativeCanvasViewController: UIViewController {
         }
     }
 
-
-
     // rotate our device, it will reset the canvas view
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -72,7 +68,6 @@ class CreativeCanvasViewController: UIViewController {
         canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
         canvasView.backgroundColor = .clear
         canvasView.isOpaque = false
-
     }
 
     // MARK: - Pencil Kit Methods
@@ -151,6 +146,7 @@ class CreativeCanvasViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 
+    // Making the drawing and image save together..
     func myImage(from canvas: PKCanvasView) -> UIImage {
         let format = UIGraphicsImageRendererFormat.default()
         format.opaque = false
@@ -159,6 +155,7 @@ class CreativeCanvasViewController: UIViewController {
         let scale = UIScreen.main.scale
         scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
 
+
         let image = UIGraphicsImageRenderer(size: scaledSize, format: format).image { context in
                imageView.image?.draw(at: .zero)
                canvas.drawing.image(from: imageView.frame, scale: scale).draw(at: .zero)
@@ -166,38 +163,53 @@ class CreativeCanvasViewController: UIViewController {
            return image
        }
 
-//    // trying to figure out how to save the image with drawing together
-//    func myImage(from canvas: PKCanvasView) -> UIImage {
-//        let format = UIGraphicsImageRendererFormat.default()
-//        format.opaque = false
-//        let image = UIGraphicsImageRenderer(size: imageView.frame.size, format: format).image { context in
-//            imageView.image?.draw(at: .zero)
-//            canvas.drawing.image(from: imageView.frame, scale: UIScreen.main.scale).draw(at: .zero)
-//        }
-//        return image
-//    }
+  func drawOnImage(_ image: UIImage) -> UIImage {
+
+        let format = UIGraphicsImageRendererFormat.default()
+        format.opaque = false
+
+        var scaledSize = imageView.bounds.size
+        let scale = UIScreen.main.scale
+        scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
+
+        UIGraphicsBeginImageContext(image.size)
+
+        image.draw(at: CGPoint.zero)
+
+        let context = UIGraphicsGetCurrentContext()
+
+        let myImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        let image = UIGraphicsImageRenderer(size: scaledSize, format: format).image { context in
+            imageView.image?.draw(at: .zero)
+            canvasView.drawing.image(from: imageView.frame, scale: scale).draw(at: .zero)
+        }
+
+        return myImage
+    }
+
     // MARK: - IBActions
 
     @IBAction func SaveButtonTapped(_ sender: Any) {
         // Save to camera roll
         saveButtonTappedAlert()
 
-        guard let originalImage = originalImage else { return }
-        let filteredImage = image(byFiltering: originalImage)
+//        guard let originalImage = originalImage else { return }
+//        let filteredImage = image(byFiltering: originalImage)
 
         let imageWithDrawing = myImage(from: canvasView)
-
 
         UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
 
         canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
 
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let drawingImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
         if image != nil {
             PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAsset(from: image!)
+                PHAssetChangeRequest.creationRequestForAsset(from: drawingImage!)
                 PHAssetChangeRequest.creationRequestForAsset(from: imageWithDrawing)
             }, completionHandler: {success, error in
                 // deal with success or error
@@ -225,9 +237,7 @@ extension CreativeCanvasViewController: PKCanvasViewDelegate, PKToolPickerObserv
         let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
         imageView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
         imageView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-
     }
-
 }
 
 extension CreativeCanvasViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
