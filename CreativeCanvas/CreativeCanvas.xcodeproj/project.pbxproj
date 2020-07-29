@@ -14,6 +14,7 @@
 		FE16E81624CF5651005E3027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81524CF5651005E3027 /* Assets.xcassets */; };
 		FE16E81924CF5651005E3027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */; };
 		FE794FDA24CF829D00BA4AFF /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE794FD924CF829D00BA4AFF /* UIImage+Scaling.swift */; };
+		FEA1DF0724D209D100A4FD86 /* ClickToDrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1DF0624D209D100A4FD86 /* ClickToDrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FE16E81824CF5651005E3027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE16E81A24CF5651005E3027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE794FD924CF829D00BA4AFF /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
+		FEA1DF0624D209D100A4FD86 /* ClickToDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickToDrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		FE16E80B24CF5650005E3027 /* CreativeCanvas */ = {
 			isa = PBXGroup;
 			children = (
-				FE16E80C24CF5650005E3027 /* AppDelegate.swift */,
-				FE16E80E24CF5650005E3027 /* SceneDelegate.swift */,
-				FE16E81024CF5650005E3027 /* CreativeCanvasViewController.swift */,
-				FE16E81224CF5650005E3027 /* Main.storyboard */,
+				FEA1DF0824D209E100A4FD86 /* App */,
+				FEA1DF0924D209EB00A4FD86 /* View Controllers */,
+				FEA1DF0A24D209FA00A4FD86 /* Storyboards */,
 				FE16E81524CF5651005E3027 /* Assets.xcassets */,
-				FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */,
 				FE16E81A24CF5651005E3027 /* Info.plist */,
 				FE794FD924CF829D00BA4AFF /* UIImage+Scaling.swift */,
 			);
 			path = CreativeCanvas;
+			sourceTree = "<group>";
+		};
+		FEA1DF0824D209E100A4FD86 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE16E80C24CF5650005E3027 /* AppDelegate.swift */,
+				FE16E80E24CF5650005E3027 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FEA1DF0924D209EB00A4FD86 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE16E81024CF5650005E3027 /* CreativeCanvasViewController.swift */,
+				FEA1DF0624D209D100A4FD86 /* ClickToDrawViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FEA1DF0A24D209FA00A4FD86 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FE16E81224CF5650005E3027 /* Main.storyboard */,
+				FE16E81724CF5651005E3027 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA1DF0724D209D100A4FD86 /* ClickToDrawViewController.swift in Sources */,
 				FE16E81124CF5650005E3027 /* CreativeCanvasViewController.swift in Sources */,
 				FE794FDA24CF829D00BA4AFF /* UIImage+Scaling.swift in Sources */,
 				FE16E80D24CF5650005E3027 /* AppDelegate.swift in Sources */,

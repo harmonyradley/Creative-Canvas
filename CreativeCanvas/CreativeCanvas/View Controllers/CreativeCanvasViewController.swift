@@ -151,14 +151,14 @@ class CreativeCanvasViewController: UIViewController {
         let format = UIGraphicsImageRendererFormat.default()
         format.opaque = false
 
-        var scaledSize = imageView.bounds.size
+        var scaledSize = canvasView.bounds.size
         let scale = UIScreen.main.scale
-        scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
+        scaledSize = CGSize(width: scaledSize.width, height: scaledSize.height)
 
 
         let image = UIGraphicsImageRenderer(size: scaledSize, format: format).image { context in
-               imageView.image?.draw(at: .zero)
-               canvas.drawing.image(from: imageView.frame, scale: scale).draw(at: .zero)
+            imageView.image?.draw(at: imageView.frame.origin)
+            canvas.drawing.image(from: canvasView.frame, scale: scale).draw(at: .zero)
            }
            return image
        }
