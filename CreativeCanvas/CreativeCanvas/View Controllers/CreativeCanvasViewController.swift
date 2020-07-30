@@ -70,6 +70,7 @@ class CreativeCanvasViewController: UIViewController {
         guard let outputCGImage = context.createCGImage(outputImage, from: outputImage.extent) else { return image }
         return UIImage(cgImage: outputCGImage, scale: image.scale, orientation: image.imageOrientation)
     }
+
     func updateImage() {
         if let originalImage = originalImage {
             imageView.image = originalImage
@@ -90,14 +91,15 @@ class CreativeCanvasViewController: UIViewController {
     }
 
     // Making the drawing and image save together..
-    func myImage(from canvas: PKCanvasView) -> UIImage {
-        let backgroundImage = imageView.image!
+    func myImage(from canvas: PKCanvasView) -> UIImage? {
+
+        let backgroundImage = imageView.image ?? nil
         let finalImageWidth = canvas.bounds.size.width
         let finalImageHeight = canvas.bounds.size.height
         let finalImageSize = canvas.bounds.size
         UIGraphicsBeginImageContextWithOptions(finalImageSize, false, UIScreen.main.scale)
-        let backgroundY = (finalImageHeight / 2) - (backgroundImage.size.height / 2)
-        backgroundImage.draw(in: CGRect(x: 0, y: backgroundY, width: backgroundImage.size.width, height: backgroundImage.size.height))
+        let backgroundY = (finalImageHeight / 2) - ((backgroundImage?.size.height ?? 0) / 2)
+        backgroundImage?.draw(in: CGRect(x: 0, y: backgroundY, width: backgroundImage?.size.width ?? 50, height: backgroundImage?.size.height ?? 50))
         let foregroundImage = canvas.drawing.image(from: CGRect(x: 0, y: 0, width: finalImageWidth, height: finalImageHeight), scale: UIScreen.main.scale)
         foregroundImage.draw(in: CGRect(x: 0, y: 0, width: finalImageWidth, height: finalImageHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -109,20 +111,24 @@ class CreativeCanvasViewController: UIViewController {
     @IBAction func SaveButtonTapped(_ sender: Any) {
         // Save to camera roll
         saveButtonTappedAlert()
-        let imageWithDrawing = myImage(from: canvasView)
+        
+        let imageWithDrawing = (myImage(from: canvasView) ?? nil)!
+
+
         UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
         canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
         let drawingImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.creationRequestForAsset(from: drawingImage!)
             PHAssetChangeRequest.creationRequestForAsset(from: imageWithDrawing)
         }, completionHandler: {success, error in
             // deal with success or error
         })
+
     }
 
-    // image scaling to canvasview
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
         presentImagePicker()
     }
