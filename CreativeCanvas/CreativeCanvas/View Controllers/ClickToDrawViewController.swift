@@ -16,6 +16,6 @@ class ClickToDrawViewController: UIViewController {
     }
     
     @IBAction func ClickToDrawButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "nextView", sender: self)
+        
     }
 }
