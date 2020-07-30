@@ -18,4 +18,8 @@ class ClickToDrawViewController: UIViewController {
     @IBAction func ClickToDrawButtonTapped(_ sender: Any) {
         
     }
+
+    @IBAction func undwindSegue(_ sender: UIStoryboardSegue){
+        print("This is undwinding")
+    }
 }
