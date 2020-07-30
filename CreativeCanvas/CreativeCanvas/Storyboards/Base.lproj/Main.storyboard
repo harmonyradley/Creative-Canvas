@@ -77,54 +77,6 @@
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="141.96428571428569"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ygr-zO-v6N">
-            <objects>
-                <viewController id="Jo8-xW-A1X" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K4k-XP-eIz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This App is designed to draw or create whatever you can dream! " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Wg-bb-gkQ">
-                                <rect key="frame" x="20" y="193" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To Creative Canvas!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIT-zE-4UO">
-                                <rect key="frame" x="20" y="131" width="374" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-fm-asL">
-                                <rect key="frame" x="20" y="377" width="88" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RoL-dT-er2">
-                                <rect key="frame" x="20" y="427" width="374" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96909052133560181" green="0.88488638401031494" blue="0.9610704779624939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="mD0-km-UdA"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jr7-4k-LpR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y95-i1-bem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="-530.35714285714289"/>
-        </scene>
         <!--Click To Draw View Controller-->
         <scene sceneID="5Y7-tG-hek">
             <objects>
@@ -168,14 +120,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lu8-zd-8Nd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Olk-Ke-mQT">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle.fill" catalog="system" id="bm2-k8-BbF">
-                            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="Jo8-xW-A1X" kind="show" identifier="InfoSegue" id="MHX-XP-cde"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Olk-Ke-mQT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULl-tU-ql0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,6 +147,5 @@
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
