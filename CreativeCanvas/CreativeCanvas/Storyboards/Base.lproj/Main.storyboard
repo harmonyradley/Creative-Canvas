@@ -38,9 +38,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Umn-a5-Dq7">
                         <leftBarButtonItems>
-                            <barButtonItem title="Back" id="i41-Ct-0hc">
+                            <barButtonItem title="Delete" id="i41-Ct-0hc">
                                 <connections>
-                                    <action selector="backButton:" destination="BYZ-38-t0r" id="agh-7E-Wdw"/>
+                                    <action selector="deleteButtonTapped:" destination="BYZ-38-t0r" id="agh-7E-Wdw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="undo" id="3od-Q8-jPe">
@@ -107,12 +107,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creative Canvas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uiq-1t-UCM">
+                                <rect key="frame" x="20" y="108" width="374" height="81"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="68"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96909052133560181" green="0.88488638401031494" blue="0.9610704779624939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oO3-Tf-BmR" firstAttribute="leading" secondItem="lu8-zd-8Nd" secondAttribute="leading" constant="100" id="2em-XG-fI9"/>
+                            <constraint firstItem="Uiq-1t-UCM" firstAttribute="top" secondItem="lu8-zd-8Nd" secondAttribute="top" constant="20" id="5nD-1x-ARF"/>
+                            <constraint firstItem="Uiq-1t-UCM" firstAttribute="leading" secondItem="lu8-zd-8Nd" secondAttribute="leading" constant="20" id="7dk-eL-4PG"/>
                             <constraint firstItem="ZG0-n4-vuX" firstAttribute="centerY" secondItem="B2M-Sx-FHI" secondAttribute="centerY" id="877-hr-D6h"/>
                             <constraint firstItem="oO3-Tf-BmR" firstAttribute="top" secondItem="lu8-zd-8Nd" secondAttribute="top" constant="117" id="C6t-27-voR"/>
+                            <constraint firstItem="lu8-zd-8Nd" firstAttribute="trailing" secondItem="Uiq-1t-UCM" secondAttribute="trailing" constant="20" id="K1e-4k-qdK"/>
                             <constraint firstItem="lu8-zd-8Nd" firstAttribute="trailing" secondItem="lXi-Ln-OM0" secondAttribute="trailing" constant="102" id="WUO-gp-Vru"/>
                             <constraint firstItem="lXi-Ln-OM0" firstAttribute="top" secondItem="lu8-zd-8Nd" secondAttribute="top" constant="117" id="XK7-Mz-scp"/>
                             <constraint firstItem="ZG0-n4-vuX" firstAttribute="centerX" secondItem="B2M-Sx-FHI" secondAttribute="centerX" id="qaS-a0-tWs"/>
@@ -123,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULl-tU-ql0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="142"/>
+            <point key="canvasLocation" x="998.55072463768124" y="141.96428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yyA-n6-2Sm">

@@ -56,11 +56,13 @@ class CreativeCanvasViewController: UIViewController {
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
+
     func saveButtonTappedAlert() {
         let alert = UIAlertController(title: "Great Drawing!", message: "Your drawing has been saved to your camera roll!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+
     // MARK: - Core Image Methods
     func image(byFiltering image: UIImage) -> UIImage {
         guard let cgImage = image.cgImage else { return image}
@@ -115,7 +117,6 @@ class CreativeCanvasViewController: UIViewController {
         
         let imageWithDrawing = (myImage(from: canvasView) ?? nil)!
 
-
         UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
         canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
         let drawingImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -127,16 +128,14 @@ class CreativeCanvasViewController: UIViewController {
         }, completionHandler: {success, error in
             // deal with success or error
         })
-
     }
 
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
         presentImagePicker()
     }
 
-
-    @IBAction func backButton(_ sender: Any) {
-        let alertView = UIAlertController(title: "Delete?", message: "Are you sure you want to delete?", preferredStyle: .actionSheet)
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        let alertView = UIAlertController(title: "Delete?", message: "Are you sure you want to delete your drawing?", preferredStyle: .actionSheet)
 
                let deleteAction = UIAlertAction (title: "Delete", style: .destructive ) { alertAction in
                    DispatchQueue.main.async {
@@ -152,11 +151,8 @@ class CreativeCanvasViewController: UIViewController {
                alertView.addAction(cancelAction)
 
                self.present(alertView, animated: true) {
-
-            }
+        }
     }
-
-
 }
 
 // MARK: - Extenstions
@@ -195,12 +191,14 @@ extension CreativeCanvasViewController: PKCanvasViewDelegate, PKToolPickerObserv
 }
 
 extension CreativeCanvasViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
             originalImage = resizeImage(image: selectedImage, targetSize: CGSize(width: imageView.frame.size.width, height: imageView.frame.size.height))
         }
         dismiss(animated: true, completion: nil)
     }
+
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
