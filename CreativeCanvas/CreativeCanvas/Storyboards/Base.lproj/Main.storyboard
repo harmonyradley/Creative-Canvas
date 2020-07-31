@@ -40,7 +40,7 @@
                         <leftBarButtonItems>
                             <barButtonItem title="Back" id="i41-Ct-0hc">
                                 <connections>
-                                    <segue destination="J8h-Kl-Yj2" kind="unwind" unwindAction="undwindSegue:" id="tkB-nC-35I"/>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" id="agh-7E-Wdw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="undo" id="3od-Q8-jPe">
@@ -73,9 +73,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="J8h-Kl-Yj2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="141.96428571428569"/>
+            <point key="canvasLocation" x="1783" y="142"/>
         </scene>
         <!--Click To Draw View Controller-->
         <scene sceneID="5Y7-tG-hek">
@@ -142,7 +141,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuD-0e-HV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="142"/>
+            <point key="canvasLocation" x="197" y="142"/>
         </scene>
     </scenes>
     <resources>

@@ -13,6 +13,7 @@ class CreativeCanvasViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var canvasView: PKCanvasView!
     @IBOutlet var imageView: UIImageView!
+    
     // MARK: - Drawing Properties
 
     var drawing = PKDrawing() // Save drawing
@@ -132,6 +133,30 @@ class CreativeCanvasViewController: UIViewController {
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
         presentImagePicker()
     }
+
+
+    @IBAction func backButton(_ sender: Any) {
+        let alertView = UIAlertController(title: "Delete?", message: "Are you sure you want to delete?", preferredStyle: .actionSheet)
+
+               let deleteAction = UIAlertAction (title: "Delete", style: .destructive ) { alertAction in
+                   DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                   }
+               }
+
+               let cancelAction = UIAlertAction (title: "Cancel", style: .cancel ) {  alertAction in
+
+               }
+
+               alertView.addAction(deleteAction)
+               alertView.addAction(cancelAction)
+
+               self.present(alertView, animated: true) {
+
+            }
+    }
+
+
 }
 
 // MARK: - Extenstions

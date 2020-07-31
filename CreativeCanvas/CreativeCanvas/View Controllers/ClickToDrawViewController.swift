@@ -10,16 +10,7 @@ import UIKit
 
 class ClickToDrawViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     @IBAction func ClickToDrawButtonTapped(_ sender: Any) {
         
-    }
-
-    @IBAction func undwindSegue(_ sender: UIStoryboardSegue){
-        print("This is undwinding")
     }
 }
